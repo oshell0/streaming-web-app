@@ -1,0 +1,20 @@
+.iconButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.iconButton:hover {
+  color: var(--accent1); 
+  filter: drop-shadow(0 0 7px rgba(236, 236, 236, 0.6));
+}
+
+.iconButton:active {
+  transform: scale(0.95);
+}

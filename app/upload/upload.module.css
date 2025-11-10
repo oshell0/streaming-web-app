@@ -1,0 +1,55 @@
+.container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--background);
+    color: #222;
+}
+
+.card {
+    background: var(--accent1);
+    padding: 1rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 420px;
+}
+
+.title {
+    color: rgb(48, 45, 45);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.success {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: rgb(48, 45, 45);
+}
+
+.input {
+    width: 100%;
+    padding: 0.3rem 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 0.7rem;
+    margin-bottom: 0.9rem;
+}
+
+
+.button {
+    width: 100%;
+    padding: 0.7rem;
+    background: var(--accent3);
+    color: white;
+    font-weight: 500;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+

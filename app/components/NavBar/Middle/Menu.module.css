@@ -1,0 +1,23 @@
+.menu {
+  display: flex;
+  justify-content: center; /* centers horizontally */
+  align-items: center;     /* centers vertically if needed */
+  gap: 2rem;               /* space between texts */
+}
+
+.textItem {
+  background: none;
+  border: none;
+  font: inherit;
+  color: var(--color-text);
+  cursor: pointer;
+  font-weight: var(--font-weight-medium);
+}
+.textItem:hover {
+  color: var(--accent1); 
+  filter: drop-shadow(0 0 7px rgba(236, 236, 236, 0.6));
+}
+
+.textItem:active {
+  transform: scale(0.95);
+}

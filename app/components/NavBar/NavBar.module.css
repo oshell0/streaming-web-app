@@ -1,0 +1,32 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    /*border-bottom: 1px solid #000000;*/
+}
+.rightGroup,
+.middleGroup,
+.leftGroup {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.middleGroup {
+  flex: 1; /* this makes it stretch evenly */
+  justify-content: center; /* centers its contents */
+}
+
+.leftGroup {
+  flex: 1; 
+  justify-content: flex-start;
+}
+
+.rightGroup {
+  flex: 1;
+  justify-content: flex-end;
+}
+.title {
+  padding-left: 1rem; 
+}

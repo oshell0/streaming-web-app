@@ -1,0 +1,56 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  overflow: hidden;
+  padding: 1rem;
+}
+
+.carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 0.5rem;
+  padding: 1rem;
+  scrollbar-width: none; 
+}
+.carousel::-webkit-scrollbar {
+  display: none; 
+}
+
+
+
+.imageContainer {
+  flex: 0 0 auto;
+  width: clamp(150px, 20vw, 250px);
+  height: clamp(100px, 15vw, 160px);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+
+}
+.imageContainer:hover {
+  transform: scale(1.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+
+.arrow {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  transition: color 0.2s ease;
+}
+.arrow:hover {
+  color: #000;
+}
