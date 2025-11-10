@@ -18,3 +18,47 @@
 .iconButton:active {
   transform: scale(0.95);
 }
+
+/* search button css -------------------------*/
+.searchContainer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  
+}
+
+.searchInput {
+  padding: 6px 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  color: white;
+}
+
+.inputWrapper {
+  position: relative;
+}
+
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 180px;
+  background: white;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  margin-top: 4px;
+  padding: 6px 0;
+  list-style: none;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 20;
+}
+
+.dropdown li {
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.15s;
+}
+

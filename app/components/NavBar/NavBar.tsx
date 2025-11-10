@@ -1,3 +1,5 @@
+"use client";
+
 import React from 'react'
 import styles from "./NavBar.module.css";
 
@@ -7,7 +9,7 @@ import UploadBtn from './Right/UploadBtn';
 import NotificationBtn from './Right/NotificationBtn';
 import Menu from './Middle/Menu';
 
-export default function NavBar() {
+export default function NavBar({ onSearch }: { onSearch: (q: string) => void }) {
   return (
     <header className={styles.navbar}>
         <div className={styles.leftGroup}>
@@ -20,7 +22,7 @@ export default function NavBar() {
         </div>
 
         <div className={styles.rightGroup}>
-            <SearchBtn />
+            <SearchBtn onSearch={onSearch} />
             <UploadBtn />
             <NotificationBtn />
             <ProfilePic />

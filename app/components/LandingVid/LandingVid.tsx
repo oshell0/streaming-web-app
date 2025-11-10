@@ -1,37 +1,36 @@
 "use client";
 import React from 'react'
 import styles from "./landingVid.module.css"
-import { Play } from 'lucide-react'
-import { useRef } from 'react';
+import { useState } from 'react';
+import ReactPlayer from "react-player";
+import type { Video } from "@/types/video.ts";
 
-export default function LandingVid() {
-  const videoRef = useRef<HTMLVideoElement>(null);
+export default function LandingVid({ videos }: { videos: Video[] }) {
+  const [isHovered, setIsHovered] = useState(false);
 
-  const handleMouseEnter = () => {
-    videoRef.current?.play();
-  };
+  const firstVideo = videos?.[0];
 
-  const handleMouseLeave = () => {
-    videoRef.current?.pause();
-  };
+  // if there is no videos in the db
+  if (!firstVideo) {
+    return <div className={styles.container}>No video found.</div>;
+  }
 
   return (
     <div
       className={styles.container}
-      onMouseEnter={handleMouseEnter}
-      onMouseLeave={handleMouseLeave}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
-      <video
-        ref={videoRef}
-        src="/relax.mp4"
-        className={styles.video}
-        muted
-        loop
-        playsInline
+     <div className={styles.player}>
+      <ReactPlayer
+        src={firstVideo.url}
+        playing={isHovered}
+        controls={isHovered}
+        width="100%"
+        height="100%"
+        muted={!isHovered}
       />
-      <div className={styles.overlay}>
-        <Play size={48} className={styles.playIcon} />
-      </div>
+     </div>
     </div>
   );
 }

@@ -1,9 +1,9 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem;
-    /*border-bottom: 1px solid #000000;*/
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  flex-wrap: wrap;
 }
 .rightGroup,
 .middleGroup,
@@ -14,8 +14,8 @@
 }
 
 .middleGroup {
-  flex: 1; /* this makes it stretch evenly */
-  justify-content: center; /* centers its contents */
+  flex: 1; 
+  justify-content: center; 
 }
 
 .leftGroup {

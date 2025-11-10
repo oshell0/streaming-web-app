@@ -2,11 +2,9 @@
 
 import React from 'react'
 import styles from "./Menu.module.css"
-import { categories } from '@/data'
-
+import { categories } from "@/data"
 
 export default function Menu() {
-
   return (
     <div className={styles.menu}>
         {categories.map((category) => (
@@ -17,9 +15,6 @@ export default function Menu() {
           {category.name}
         </button>
       ))}
-    </div>
-    
-    
-    
+    </div>  
   )
 }

@@ -1,8 +1,8 @@
 .menu {
   display: flex;
-  justify-content: center; /* centers horizontally */
-  align-items: center;     /* centers vertically if needed */
-  gap: 2rem;               /* space between texts */
+  justify-content: center; 
+  align-items: center;     
+  gap: 2rem;               
 }
 
 .textItem {

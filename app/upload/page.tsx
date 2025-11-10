@@ -6,7 +6,7 @@ export default function UploadPage() {
   const [title, setTitle] = useState("");
   const [url, setUrl] = useState("");
   const [category, setCategory] = useState("");
-  const [uploaded, setUploaded] = useState(false); // 🧩 add this line
+  const [uploaded, setUploaded] = useState(false);
 
   const handleUpload = async () => {
     try {
@@ -25,7 +25,6 @@ export default function UploadPage() {
         // show "uploaded" message
         setUploaded(true);
 
-        
       } else {
         console.error("Upload failed:", await res.text());
       }
